@@ -6,30 +6,57 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <script src="script.js" defer></script>
   <link rel="stylesheet" href="styles.css">
-  <title>Password Generator</title>
+  <title>Générateur de mot de passe</title>
 </head>
 <body>
+  <h1 class="title">Générateur de mot de passe</h1>
+  <p>Générez des mots de passe sécurisés et aléatoires pour rester en sécurité en ligne.</p>
+  <div class="password">
+    <h3 class="password-display" id="passwordDisplay"></h3>
+    <button type="submit" class="btn"><img src="./assets /asset 6.svg"></button>
+    <button class="copy">copier</button>
+  </div>
   <div class="container">
-    <h1 class="title">Password Generator</h1>
-    <h3 class="password-display" id="passwordDisplay">password</h3>
     <form id="passwordGeneratorForm" class="form">
-      <label for="characterAmountNumber">Number Of Characters</label>
-      <div class="character-amount-container">
-        <input type="range" min="1" max="50" value="10" id="characterAmountRange">
-        <input class="number-input" type="number" min="1" max="50" value="10" id="characterAmountNumber">
+      <div class="div1">
+        <label for="characterAmountNumber">Taille</label>
+        <div id="character-amount-container">
+          <input type="range" min="1" max="50" value="10" id="characterAmountRange">
+          <input class="number-input" type="number" min="1" max="50" value="10" id="characterAmountNumber">
+        </div>
       </div>
 
-      <label for="includeUppercase">Include Uppercase</label>
-      <input type="checkbox" id="includeUppercase">
+      <div class="div2">
+        <label for="includeUppercase">Majuscules</label>
+        <input type="checkbox" id="includeUppercase">
+      </div>
 
-      <label for="includeNumbers">Include Numbers</label>
-      <input type="checkbox" id="includeNumbers">
+      <div class="div3">
+        <label for="includeNumbers">Nombres</label>
+        <input type="checkbox" id="includeNumbers">
+      </div>
 
-      <label for="includeSymbols">Include Symbols</label>
-      <input type="checkbox" id="includeSymbols">
+      <div class="div4">
+        <label for="includeSymbols">Symboles</label>
+        <input type="checkbox" id="includeSymbols">
+      </div>
 
-      <button type="submit" class="btn">Generate Password</button>
+      <div class="div5">
+        <label for="includeSymbols">Lettres</label>
+        <input type="checkbox" id="includeSymbols">
+      </div>
+
+      <div class="div6">
+        <label for="includeSymbols">Exclure des caractères similaires</label>
+        <input type="checkbox" id="includeSymbols">
+      </div>
     </form>
+  </div>
+  <div class="images">
+    <img class="phone" src="./assets /asset 0.svg">
+    <img class="float1" src="./assets /asset 1.svg">
+    <img class="float2" src="./assets /asset 2.svg">
+    <img class="float3" src="./assets /asset 3.svg">
   </div>
 </body>
 </html>
