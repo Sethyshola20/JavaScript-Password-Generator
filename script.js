@@ -52,6 +52,21 @@ function generatePassword(
   }
   return passwordCharacters.join("");
 }
+const onLoad = () => {
+  generatePassword(
+    25,
+    includeUppercaseElement.checked,
+    includeNumbersElement.checked,
+    includeSymbolsElement.checked
+  );
+  passwordDisplay.innerText = generatePassword(
+    25,
+    includeUppercaseElement.checked,
+    includeNumbersElement.checked,
+    includeSymbolsElement.checked
+  );
+};
+onLoad();
 
 function arrayFromLowToHigh(low, high) {
   const array = [];
@@ -75,3 +90,16 @@ async function copy() {
 const copyBtn = document.querySelector(".copy");
 
 copyBtn.addEventListener("click", () => copy());
+/**spin */
+const spinBtn = document.getElementById("spin");
+const delay = (ms) => new Promise((res) => setTimeout(res, ms));
+
+spinBtn.addEventListener("click", async () => {
+  await delay(500);
+  spinBtn.style.transition = ".4s";
+  spinBtn.style.transform = "rotate(360deg)";
+
+  await delay(500);
+  spinBtn.style.transition = ".0s";
+  spinBtn.style.transform = "rotate(-360deg)";
+});
