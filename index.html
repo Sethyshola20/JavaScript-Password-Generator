@@ -28,27 +28,43 @@
 
       <div class="div2">
         <label for="includeUppercase">Majuscules</label>
-        <input type="checkbox" id="includeUppercase" checked>
+        <label class="switch" for="includeUppercase">
+          <input type="checkbox" id="includeUppercase" checked >
+          <span class="slider round"></span>
+        </label>
+        
       </div>
 
       <div class="div3">
         <label for="includeNumbers">Nombres</label>
-        <input type="checkbox" id="includeNumbers" checked>
+        <label class="switch" for="includeNumbers">
+          <input type="checkbox" id="includeNumbers" checked>
+          <span class="slider round"></span>
+        </label>
       </div>
 
       <div class="div4">
         <label for="includeSymbols">Symboles</label>
-        <input type="checkbox" id="includeSymbols">
+        <label class="switch" for="includeSymbols">
+          <input type="checkbox" id="includeSymbols" >
+          <span class="slider round"></span>
+        </label>
       </div>
 
       <div class="div5">
-        <label for="includeSymbols">Lettres</label>
-        <input type="checkbox" id="includeSymbols" checked>
+        <label for="includeLetters">Lettres</label>
+        <label class="switch" for="includeLetters">
+          <input type="checkbox" id="includeLetters" checked>
+          <span class="slider round"></span>
+        </label>
       </div>
 
       <div class="div6">
-        <label for="includeSymbols">Exclure des caractères similaires</label>
-        <input type="checkbox" id="includeSymbols">
+        <label for="excludeSimilar">Caractères<br> similaires</label>
+        <label class="switch" for="excludeSimilar">
+          <input type="checkbox" id="excludeSimilar" checked>
+          <span class="slider round"></span>
+        </label>
       </div>
     </form>
   </div>

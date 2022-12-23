@@ -3,6 +3,7 @@ const characterAmountNumber = document.getElementById("characterAmountNumber");
 const includeUppercaseElement = document.getElementById("includeUppercase");
 const includeNumbersElement = document.getElementById("includeNumbers");
 const includeSymbolsElement = document.getElementById("includeSymbols");
+const includeLettersElement = document.getElementById("includeLetters");
 const form = document.getElementById("passwordGeneratorForm");
 const passwordDisplay = document.getElementById("passwordDisplay");
 const btn = document.querySelector(".btn");
@@ -24,11 +25,13 @@ btn.addEventListener("click", (e) => {
   const includeUppercase = includeUppercaseElement.checked;
   const includeNumbers = includeNumbersElement.checked;
   const includeSymbols = includeSymbolsElement.checked;
+  const includeLetters = includeLettersElement.checked;
   const password = generatePassword(
     characterAmount,
     includeUppercase,
     includeNumbers,
-    includeSymbols
+    includeSymbols,
+    includeLetters
   );
   passwordDisplay.innerText = password;
 });
@@ -37,12 +40,14 @@ function generatePassword(
   characterAmount,
   includeUppercase,
   includeNumbers,
-  includeSymbols
+  includeSymbols,
+  includeLetters
 ) {
-  let charCodes = LOWERCASE_CHAR_CODES;
+  let charCodes = [];
   if (includeUppercase) charCodes = charCodes.concat(UPPERCASE_CHAR_CODES);
   if (includeSymbols) charCodes = charCodes.concat(SYMBOL_CHAR_CODES);
   if (includeNumbers) charCodes = charCodes.concat(NUMBER_CHAR_CODES);
+  if (includeLetters) charCodes = charCodes.concat(LOWERCASE_CHAR_CODES);
 
   const passwordCharacters = [];
   for (let i = 0; i < characterAmount; i++) {
@@ -57,13 +62,15 @@ const onLoad = () => {
     25,
     includeUppercaseElement.checked,
     includeNumbersElement.checked,
-    includeSymbolsElement.checked
+    includeSymbolsElement.checked,
+    includeLettersElement.checked
   );
   passwordDisplay.innerText = generatePassword(
     25,
     includeUppercaseElement.checked,
     includeNumbersElement.checked,
-    includeSymbolsElement.checked
+    includeSymbolsElement.checked,
+    includeLettersElement.checked
   );
 };
 onLoad();
@@ -95,9 +102,9 @@ const spinBtn = document.getElementById("spin");
 const delay = (ms) => new Promise((res) => setTimeout(res, ms));
 
 spinBtn.addEventListener("click", async () => {
-  await delay(500);
+  await delay(5);
   spinBtn.style.transition = ".4s";
-  spinBtn.style.transform = "rotate(360deg)";
+  spinBtn.style.transform = "rotate(720deg)";
 
   await delay(500);
   spinBtn.style.transition = ".0s";
