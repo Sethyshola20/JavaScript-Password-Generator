@@ -46,7 +46,7 @@ p{
   border-radius: 10px;
   width: 80vw;
   height: 150px;
-  padding: 1.25em .5em;
+  padding: 1.25em 1em;
   }
   label{
     color: #111111;
@@ -301,6 +301,13 @@ p{
     .number-input{
       width: 45px;
       font-size: 16px;
+    }
+    .float4{
+      top: 8vh;
+      left: 7vw;
+      position: absolute;
+      z-index: 0;
+      width: 175px;
     }
   }
 
