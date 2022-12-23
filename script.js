@@ -92,7 +92,7 @@ function syncCharacterAmount(e) {
 async function copy() {
   const password = passwordDisplay.innerText;
   await navigator.clipboard.writeText(password);
-  alert("Copied the text: " + password);
+  alert("Le texte suivant a été copié: " + password);
 }
 const copyBtn = document.querySelector(".copy");
 
